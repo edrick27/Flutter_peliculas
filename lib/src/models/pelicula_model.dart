@@ -80,6 +80,14 @@ class Pelicula {
     }
   }
 
+  getBackgroundImg(){
+    if (posterPath == null){
+      return 'https://images.immediate.co.uk/production/volatile/sites/3/2017/11/imagenotavailable1-39de324.png?quality=90&resize=768,574';
+    } else {
+      return 'https://image.tmdb.org/t/p/w500$backdropPath';
+    }
+  }
+
 
 }
 
