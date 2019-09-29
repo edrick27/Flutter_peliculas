@@ -20,6 +20,9 @@ class Peliculas {
 
 
 class Pelicula {
+
+  String uniqueId;
+
   int voteCount;
   int id;
   bool video;
@@ -68,7 +71,6 @@ class Pelicula {
     adult            = json['adult'];
     overview         = json['overview'];
     releaseDate      = json['release_date'];
-
 
   }
 

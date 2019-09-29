@@ -36,17 +36,23 @@ class MovieHorizontal extends StatelessWidget {
   }
 
   Widget _crearTarjeta(BuildContext context,Pelicula pelicula){
+
+    pelicula.uniqueId = '${ pelicula.id } - tajera_horizontal';
+
     final tarjeta = Container(
         margin: EdgeInsets.only(right: 15.0),
         child: Column(
           children: <Widget>[
-            ClipRRect(
-              borderRadius: BorderRadius.circular(13.0),
-              child: FadeInImage(
-                image: NetworkImage(pelicula.getPosterImg()),
-                placeholder: AssetImage("assets/img/loading.gif"),
-                fit: BoxFit.cover,
-                height: 120.0,
+            Hero(
+              tag: pelicula.uniqueId,
+              child: ClipRRect(
+                borderRadius: BorderRadius.circular(13.0),
+                child: FadeInImage(
+                  image: NetworkImage(pelicula.getPosterImg()),
+                  placeholder: AssetImage("assets/img/loading.gif"),
+                  fit: BoxFit.cover,
+                  height: 120.0,
+                ),
               ),
             ),
             SizedBox(height: 5.0),
