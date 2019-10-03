@@ -7,7 +7,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Pe lículas',
+      title: 'Películas',
       debugShowCheckedModeBanner: false,
       initialRoute: '/',
       routes: getRoutes(),
